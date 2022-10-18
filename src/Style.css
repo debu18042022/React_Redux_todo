@@ -1,0 +1,24 @@
+.Polaris-Card__Section {
+  /* border: 1px solid black; */
+  width: 60vw;
+  margin: 3px;
+}
+
+.Polaris-Button {
+  margin-right: 10px;
+  border: 1px solid black;
+}
+.container{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+
+}
+.rigthContainer {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+
+  /* border: 1px solid black; */
+  /* text-align: end; */
+}

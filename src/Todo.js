@@ -83,7 +83,7 @@ const Todo = (props) => {
             <>
               <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
                 <Card title="" sectioned>
-                  <div className="container">
+                  <div className="container" key={index}>
                     <div className="leftContainer">
                       {item.checked === true ? (
                         <>
@@ -92,16 +92,14 @@ const Todo = (props) => {
                             onChange={(e) => handleCheck(e, index)}
                           />
                           {console.log(item.cheked)}
-                          <s>
-                            <span
-                              style={{
-                                display: "inline-block",
-                                fontSize: "1.2rem",
-                              }}
-                            >
-                              {item.data}
-                            </span>
-                          </s>
+                          <span
+                            style={{
+                              display: "inline-block",
+                              fontSize: "1.2rem",
+                            }}
+                          >
+                            <s> {item.data}</s>
+                          </span>
                         </>
                       ) : (
                         <>
@@ -118,9 +116,11 @@ const Todo = (props) => {
                           >
                             {item.data}
                           </span>
+                          
                         </>
                       )}
                     </div>
+                    {/* buttons */}
                     <div className="rigthContainer">
                       <Button
                         destructive
